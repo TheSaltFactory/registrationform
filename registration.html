@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8' />
+        <link rel='stylesheet' href='registration.css' type='text/css' />
+        <script src='registration.js'></script>
+    </head>
+    <body onload='document.registration.username.focus();'>
+        <h1>Registration Form</h1>
+        <form name='registration' onSubmit='return formValidation();'>
+            <ul>
+                <li><label for='username'>Name:</label></li>
+                <li><input type='text' name='username' maxlength='100'/></li>
+
+                <li><label for='email'>Email:</label></li>
+                <li><input type='text' name='email' maxlength='100'/></li>
+
+                <li><label for='refer'>Refered?:</label></li>
+                <li><select name='refer' id='refer' onchange="enableReferrer()"></select></li>
+                <li><label for='referrerName'>Referrer:</label></li>
+                <li><input type='text' name='referrerName' maxlength='100' disabled = "true" /></li>
+
+                <li><input type='submit' name='submit' value='Submit' /></li>
+            </ul>
+        </form>
+    </body>
+</html>
